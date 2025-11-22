@@ -1,110 +1,144 @@
-# Multi-Agent Tourism System
 
-A multi-agent system that helps users plan their trips by providing weather information and tourist attraction suggestions for any place.
+
+# 🌍 Multi-Agent Tourism System
+
+A multi-agent system that helps users plan their trips by providing real-time weather information and tourist attraction suggestions for any place.
+
+---
 
 ## 🌐 Web Application Available!
 
-The system is now available as a *beautiful web application* with a modern UI. Run python app.py to start the web server!
+The system includes a **beautiful, modern web application** with a responsive UI.
+Run the server with:
 
-## Features
-
-- *🌐 Web Interface*: Beautiful, modern web UI with responsive design
-- *🌍 Multi-Language Support*: Translate results to 30+ languages (Japanese, Chinese, Spanish, French, etc.)
-- *Weather Agent*: Fetches current weather and forecast using Open-Meteo API
-- *Places Agent*: Suggests up to 5 tourist attractions using Overpass API
-- *Tourism AI Agent*: Orchestrates the system and provides natural language responses using OpenAI API
-- *Error Handling*: Gracefully handles non-existent places
-- *Lightweight*: Uses OpenAI SDK directly (no heavy dependencies)
-- *Dual Mode*: Online (AI-powered) and Offline (direct API) modes
-
-## Setup
-
-1. Install dependencies:
-bash
-pip install -r requirements.txt
-
-
-2. Create a .env file with your OpenAI API key (optional, for AI mode):
-
-OPENAI_API_KEY=your_api_key_here
-
-
-3. *Run the Web Application* (Recommended):
-bash
+```bash
 python app.py
+```
 
-Then open your browser to: http://localhost:5000
+Then open:
+[http://localhost:5000](http://localhost:5000)
 
-4. Or run the CLI version:
-bash
+---
+
+## ✨ Features
+
+* **🌐 Web Interface** — Elegant and responsive UI
+* **🌍 Multi-Language Support** — Translate results into 30+ languages
+* **Weather Agent** — Fetches current weather + forecast using *Open-Meteo API*
+* **Places Agent** — Suggests up to 5 tourist attractions using *Overpass API*
+* **Tourism AI Agent** — Provides natural language responses using OpenAI API
+* **Error Handling** — Identifies invalid or non-existent places
+* **Lightweight** — Uses OpenAI SDK, minimal dependencies
+* **Dual Mode Support**
+
+  * Online AI mode
+  * Offline API-only mode
+
+---
+
+## ⚙️ Setup
+
+### 1️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2️⃣ Create a `.env` file (optional, required for AI mode)
+
+```
+OPENAI_API_KEY=your_api_key_here
+```
+
+### 3️⃣ Run the Web Application (Recommended)
+
+```bash
+python app.py
+```
+
+### 4️⃣ Run the CLI Version
+
+```bash
 python main.py
+```
 
+### 5️⃣ Run Offline Mode (No OpenAI API Key Needed)
 
-5. Or test the offline mode:
-bash
+```bash
 python offline_main.py
+```
 
+---
 
-## Usage
+## 🕹 Usage
 
-### Online Mode (with OpenAI)
+### ▶️ Online Mode (with OpenAI)
 
-Run the main application:
-bash
+Run:
+
+```bash
 python main.py
+```
 
+Then ask questions such as:
 
-Enter a place you want to visit, and optionally ask about weather or places to visit.
+* “I'm going to go to Bangalore, let's plan my trip.”
+* “I'm going to go to Bangalore, what is the temperature there?”
+* “I'm going to Bangalore — weather + places to visit?”
 
-Examples:
-- "I'm going to go to Bangalore, let's plan my trip."
-- "I'm going to go to Bangalore, what is the temperature there"
-- "I'm going to go to Bangalore, what is the temperature there? And what are the places I can visit?"
+### ▶️ Offline Mode (API Testing Only)
 
-### Offline Mode (without OpenAI - for testing APIs)
-
-Test the weather and places APIs without needing OpenAI:
-
-bash
+```bash
 python offline_main.py
+```
 
+Or automated tests:
 
-Or run automated tests:
-bash
+```bash
 python test_offline.py
+```
 
+Offline mode:
 
-The offline mode:
-- Works without OpenAI API key
-- Directly asks for place name and what information you want
-- Tests all APIs (Nominatim, Open-Meteo, Overpass)
-- Perfect for testing when OpenAI quota is exceeded
+* Works without OpenAI API key
+* Tests Nominatim, Open-Meteo, Overpass
+* Useful when API quota is exceeded
 
-## APIs Used
+---
 
-All APIs are *open-source web services* (no installation needed, accessed via HTTP):
+## 🌐 APIs Used
 
-- *Nominatim API*: For geocoding (getting coordinates from place names)
-  - Endpoint: https://nominatim.openstreetmap.org/search
-  - Documentation: https://nominatim.org/release-docs/develop/api/Search/
-  
-- *Open-Meteo API*: For weather data
-  - Endpoint: https://api.open-meteo.com/v1/forecast
-  - Documentation: https://open-meteo.com/en/docs
-  
-- *Overpass API*: For tourist attractions and places of interest
-  - Base URL: https://overpass-api.de/api/interpreter
-  - Documentation: https://wiki.openstreetmap.org/wiki/Overpass_API
+All APIs are **open-source** and accessed over HTTP:
 
-### Verify APIs are Working
+### 📍 Nominatim API — Geocoding
 
-Run the API test script to verify all APIs are accessible:
-bash
+* Converts place name → coordinates
+* Docs: [https://nominatim.org/release-docs/develop/api/Search/](https://nominatim.org/release-docs/develop/api/Search/)
+
+### ☁ Open-Meteo API — Weather Forecast
+
+* Provides temperature, rain probability, and more
+* Docs: [https://open-meteo.com/en/docs](https://open-meteo.com/en/docs)
+
+### 🗺 Overpass API — Tourist Attractions
+
+* Fetches POIs around given coordinates
+* Docs: [https://wiki.openstreetmap.org/wiki/Overpass_API](https://wiki.openstreetmap.org/wiki/Overpass_API)
+
+---
+
+## 🧪 Verify APIs Are Working
+
+Test all APIs:
+
+```bash
 python test_apis.py
+```
 
+This validates:
 
-This will test:
-- ✅ Nominatim API (geocoding)
-- ✅ Open-Meteo API (weather)
-- ✅ Overpass API (tourist attractions)
-- ✅ Complete flow (all APIs together)
+* ✅ Nominatim (Geocoding)
+* ✅ Open-Meteo (Weather)
+* ✅ Overpass (Places)
+* ✅ Full end-to-end flow
+
