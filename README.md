@@ -1,5 +1,3 @@
-
-````markdown
 # 🌍 Multi-Agent Tourism System
 
 A multi-agent system that helps users plan their trips by providing real-time weather information and tourist attraction suggestions for any place.
@@ -13,70 +11,80 @@ The system is deployed and available online here:
 
 ---
 
+
+## 🌐 Web Application Available!
+
+The system includes a *beautiful, modern web application* with a responsive UI.
+Run the server with:
+
+bash
+python app.py
+
+
+Then open:
+[http://localhost:5000](http://localhost:5000)
+
+---
+
 ## ✨ Features
 
-* **🌐 Web Interface** — Elegant and responsive UI
-* **🌍 Multi-Language Support** — Translate results into 30+ languages
-* **Weather Agent** — Fetches current weather + forecast using *Open-Meteo API*
-* **Places Agent** — Suggests up to 5 tourist attractions using *Overpass API*
-* **Tourism AI Agent** — Provides natural language responses using OpenAI API
-* **Error Handling** — Identifies invalid or non-existent places
-* **Lightweight** — Uses OpenAI SDK, minimal dependencies
-* **Dual Mode Support**
+* *🌐 Web Interface* — Elegant and responsive UI
+* *🌍 Multi-Language Support* — Translate results into 30+ languages
+* *Weather Agent* — Fetches current weather + forecast using Open-Meteo API
+* *Places Agent* — Suggests up to 5 tourist attractions using Overpass API
+* *Tourism AI Agent* — Provides natural language responses using OpenAI API
+* *Error Handling* — Identifies invalid or non-existent places
+* *Lightweight* — Uses OpenAI SDK, minimal dependencies
+* *Dual Mode Support*
+
   * Online AI mode
   * Offline API-only mode
 
 ---
 
-## ⚙️ Setup
+## ⚙ Setup
 
-### 1️⃣ Install dependencies
+### ⿡ Install dependencies
 
-```bash
+bash
 pip install -r requirements.txt
-````
 
-### 2️⃣ Create a `.env` file (required for AI mode)
 
-```
+### ⿢ Create a .env file (optional, required for AI mode)
+
+
 OPENAI_API_KEY=your_api_key_here
-```
 
-### 3️⃣ Run the Web Application (Recommended)
 
-```bash
+### ⿣ Run the Web Application (Recommended)
+
+bash
 python app.py
-```
 
-Then open:
-[http://localhost:5000](http://localhost:5000)
 
-Or access the **live deployment** here:
-[https://inkle-assignement-ai.onrender.com](https://inkle-assignement-ai.onrender.com)
+### ⿤ Run the CLI Version
 
-### 4️⃣ Run the CLI Version
-
-```bash
+bash
 python main.py
-```
 
-### 5️⃣ Run Offline Mode (No OpenAI API Key Needed)
 
-```bash
+### ⿥ Run Offline Mode (No OpenAI API Key Needed)
+
+bash
 python offline_main.py
-```
+
 
 ---
 
 ## 🕹 Usage
 
-### ▶️ Online Mode (with OpenAI)
+### ▶ Online Mode (with OpenAI)
 
 Run:
 
-```bash
+bash
 python main.py
-```
+
 
 Then ask questions such as:
 
@@ -84,17 +92,17 @@ Then ask questions such as:
 * “I'm going to go to Bangalore, what is the temperature there?”
 * “I'm going to Bangalore — weather + places to visit?”
 
-### ▶️ Offline Mode (API Testing Only)
+### ▶ Offline Mode (API Testing Only)
 
-```bash
+bash
 python offline_main.py
-```
+
 
 Or automated tests:
 
-```bash
+bash
 python test_offline.py
-```
+
 
 Offline mode:
 
@@ -106,7 +114,7 @@ Offline mode:
 
 ## 🌐 APIs Used
 
-All APIs are **open-source** and accessed over HTTP:
+All APIs are *open-source* and accessed over HTTP:
 
 ### 📍 Nominatim API — Geocoding
 
@@ -129,19 +137,13 @@ All APIs are **open-source** and accessed over HTTP:
 
 Test all APIs:
 
-```bash
+bash
 python test_apis.py
-```
+
 
 This validates:
 
 * ✅ Nominatim (Geocoding)
 * ✅ Open-Meteo (Weather)
 * ✅ Overpass (Places)
-* ✅ Full end-to-end flow
-
-```
-
----
-
-
+* ✅ Full end-to-end flow
