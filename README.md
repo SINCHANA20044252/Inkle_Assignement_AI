@@ -1,22 +1,15 @@
 
-
+````markdown
 # 🌍 Multi-Agent Tourism System
 
 A multi-agent system that helps users plan their trips by providing real-time weather information and tourist attraction suggestions for any place.
 
 ---
 
-## 🌐 Web Application Available!
+## 🌐 Live Web Application
 
-The system includes a **beautiful, modern web application** with a responsive UI.
-Run the server with:
-
-```bash
-python app.py
-```
-
-Then open:
-[http://localhost:5000](http://localhost:5000)
+The system is deployed and available online here:  
+[https://inkle-assignement-ai.onrender.com](https://inkle-assignement-ai.onrender.com)
 
 ---
 
@@ -30,7 +23,6 @@ Then open:
 * **Error Handling** — Identifies invalid or non-existent places
 * **Lightweight** — Uses OpenAI SDK, minimal dependencies
 * **Dual Mode Support**
-
   * Online AI mode
   * Offline API-only mode
 
@@ -42,9 +34,9 @@ Then open:
 
 ```bash
 pip install -r requirements.txt
-```
+````
 
-### 2️⃣ Create a `.env` file (optional, required for AI mode)
+### 2️⃣ Create a `.env` file (required for AI mode)
 
 ```
 OPENAI_API_KEY=your_api_key_here
@@ -55,6 +47,12 @@ OPENAI_API_KEY=your_api_key_here
 ```bash
 python app.py
 ```
+
+Then open:
+[http://localhost:5000](http://localhost:5000)
+
+Or access the **live deployment** here:
+[https://inkle-assignement-ai.onrender.com](https://inkle-assignement-ai.onrender.com)
 
 ### 4️⃣ Run the CLI Version
 
@@ -141,4 +139,9 @@ This validates:
 * ✅ Open-Meteo (Weather)
 * ✅ Overpass (Places)
 * ✅ Full end-to-end flow
+
+```
+
+---
+
 
